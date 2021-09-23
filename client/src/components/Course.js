@@ -5,7 +5,7 @@ function Course({course}) {
         <Card>
             <Image src={course.subject_image} wrapped ui={false} />
             <Card.Content>
-                <Card.Header>Quantum Mechanics</Card.Header>
+                <Card.Header>{course.subject}</Card.Header>
                 <Card.Meta>
                     <span className='date'>Joined in 2015</span>
                 </Card.Meta>

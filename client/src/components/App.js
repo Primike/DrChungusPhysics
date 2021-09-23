@@ -37,6 +37,10 @@ function App() {
             <Route path="/courses">
               <Courses courses = {courses}/>
             </Route>
+            {/* {courses.map((x) => (
+              <Route path = {`/${x.subject}`}
+
+            )} */}
             <Route path="/">
               <UserHome user={user}/>
             </Route>

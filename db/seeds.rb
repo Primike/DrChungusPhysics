@@ -11,6 +11,4 @@
 # Course.create(subject: 'Quantum Mechanics', subject_image: "https://scx2.b-cdn.net/gfx/news/hires/2015/5666a45b218f7.jpg", completed: false)
 # Course.create(subject: 'Classical Mechanics', subject_image: "https://cdn1.byjus.com/wp-content/uploads/2018/11/physics/wp-content/uploads/2016/08/3.png", completed: false)
 # Course.create(subject: 'Electricity and Magnetism', subject_image: "https://cdn.vox-cdn.com/thumbor/1ZPuV80n_PVUARYlkcCorFG_Frk=/0x0:3000x3000/1200x800/filters:focal(1260x1260:1740x1740)/cdn.vox-cdn.com/uploads/chorus_image/image/50911339/electricity.0.jpg", completed: false)
-UserCourse.create(user_id: User.first.id, course_id: Course.first.id)
-UserCourse.create(user_id: User.first.id, course_id: Course.second.id)
-UserCourse.create(user_id: User.first.id, course_id: Course.third.id)
+
