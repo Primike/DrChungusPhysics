@@ -10,6 +10,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   const [user, setUser] = useState(null);
+  const [courses, setCourses] = useState([])
 
   useEffect(() => {
     // auto-login
@@ -19,6 +20,13 @@ function App() {
       }
     });
   }, []);
+  
+  useEffect(() => {
+    fetch('/courses')
+    .then(res => res.json())
+    .then(courses => setCourses(courses))
+}, [])
+
 
   return (
     <>
@@ -27,7 +35,7 @@ function App() {
         {user ? (
           <Switch>
             <Route path="/courses">
-              <Courses user={user}/>
+              <Courses courses = {courses}/>
             </Route>
             <Route path="/">
               <UserHome user={user}/>

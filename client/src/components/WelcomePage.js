@@ -1,5 +1,3 @@
-import UserHome from "./UserHome"
-
 function WelcomePage() {
     return (
       <div className = "welcomepage">

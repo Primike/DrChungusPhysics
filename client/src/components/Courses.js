@@ -1,6 +1,13 @@
-function Courses() {
+import Course from './Course'
+
+function Courses({courses}) {
     return (
-        <h1>Courses asdasdas asdasd </h1>
+        <>
+            {courses.map((x) => (
+                <Course course = {x} key ={x.subject} />
+            ))}
+            
+        </>
     )
 }
 

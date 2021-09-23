@@ -1,7 +1,7 @@
 import React from "react";
 import UserTabs from "./UserTabs"
 import { NavLink } from "react-router-dom";
-import { Menu, Segment, Header, Button } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 function NavBar({ user, setUser }) {
   function handleLogoutClick() {

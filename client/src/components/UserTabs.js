@@ -1,4 +1,4 @@
-import { Menu, Segment, Header, Button } from 'semantic-ui-react'
+import { Menu, Button } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom"
 
 function UserTabs({handleLogoutClick}) {
