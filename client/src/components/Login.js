@@ -20,8 +20,8 @@ function Login({ setUser }) {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className = "logindiv">
+      <form className ="login" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label htmlFor="username">Username</label>
         <input

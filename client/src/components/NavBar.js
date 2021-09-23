@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import UserTabs from "./UserTabs"
+import { NavLink } from "react-router-dom";
+import { Menu, Segment, Header, Button } from 'semantic-ui-react'
 
 function NavBar({ user, setUser }) {
   function handleLogoutClick() {
@@ -11,20 +13,16 @@ function NavBar({ user, setUser }) {
   }
 
   return (
-    <header>
-      <div>
-        <Link to="/">Home</Link>
-      </div>
-      <div>
+    <header className = "headerz">
         {user ? (
-          <button onClick={handleLogoutClick}>Logout</button>
+          <UserTabs handleLogoutClick = {handleLogoutClick}/>
         ) : (
           <>
-            <Link to="/signup">Signup</Link>
-            <Link to="/login">Login</Link>
+            <Button><NavLink to="/">Home</NavLink></Button>
+            <Button><NavLink to="/signup">Signup</NavLink></Button>
+            <Button><NavLink to="/login">Login</NavLink></Button>
           </>
         )}
-      </div>
     </header>
   );
 }

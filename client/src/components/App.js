@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./SignUp";
+import UserHome from "./UserHome"
+import Courses from "./Courses";
 import Login from "./Login";
 import NavBar from "./NavBar";
-import Home from "./Home";
+import WelcomePage from "./WelcomePage";
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -23,8 +26,11 @@ function App() {
       <main>
         {user ? (
           <Switch>
+            <Route path="/courses">
+              <Courses user={user}/>
+            </Route>
             <Route path="/">
-              <Home user={user}/>
+              <UserHome user={user}/>
             </Route>
           </Switch>
         ) : (
@@ -36,7 +42,7 @@ function App() {
               <Login setUser={setUser} />
             </Route>
             <Route path="/">
-              <Home />
+              <WelcomePage />
             </Route>
           </Switch>
         )}

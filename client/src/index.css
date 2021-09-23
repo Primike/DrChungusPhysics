@@ -1,16 +1,16 @@
-body {
+.bodyz {
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 900px;
-  background: url("https://www.kiwi.com/stories/wp-content/uploads/2021/04/fun-facts-space-top2-1920x550.jpg") no-repeat center center fixed; 
+  background: url("https://media-exp1.licdn.com/dms/image/C4D1BAQGAO9zvVhyAqQ/company-background_10000/0/1539806088038?e=2159024400&v=beta&t=5vq2-UBGsfB5RPQaOHqFEHtmdq47wFGYL27qOMblKwc") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0rem;
 }
 
 code {
@@ -18,44 +18,54 @@ code {
     monospace;
 }
 
-header {
+.headerz {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
-}
-
-header a,
-header button {
-  font-size: 1rem;
-  display: inline-block;
   background-color: #fff8e7;
-  border: 1px solid salmon;
-  margin: 1rem;
-  padding: 1rem;
-  text-decoration: none;
-  color: salmon;
-  cursor: pointer;
 }
 
-main {
-  margin: 1rem;
+.signupdiv {
+  display: flex;
+  flex-direction: row;
+  background: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pillars_of_creation.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 900px;
 }
 
-form {
+.signup {
   background-color: #fff8e7;
-  border: 1px solid salmon;
+  border: 3px solid rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   width: 400px;
   margin: 0 auto;
   padding: 0 1rem 1rem;
+  height: 700px;
 }
 
-form input {
-  margin: 0.25rem 0;
+.login {
+  background-color: #fff8e7;
+  border: 3px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+  height: 200px;
+}
+.logindiv {
+  display: flex;
+  flex-direction: row;
+  background: url("https://i.pinimg.com/originals/99/4a/c2/994ac21c38ce0962e475441caa400e69.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 900px;
 }
 
-form button[type="submit"] {
-  width: 40%;
-}
