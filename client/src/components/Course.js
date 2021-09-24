@@ -1,22 +1,16 @@
-import { Card, Image, Button } from 'semantic-ui-react'
+import { Tab } from 'semantic-ui-react'
+import Chapter from './Chapter';
 
 function Course({course}) {
+    let newTabRender = [];
+    console.log(course.chapters)
+    course.chapters.map((chapter, index) => {
+        newTabRender.push({menuItem: `Ch ${chapter.id} ${chapter.title}`, render: () => <Tab.Pane> <Chapter key={chapter.title} chapter = {chapter}/> </Tab.Pane>})
+    })
     return (
-        <Card>
-            <Image src={course.subject_image} wrapped ui={false} />
-            <Card.Content>
-                <Card.Header>{course.subject}</Card.Header>
-                <Card.Meta>
-                    <span className='date'>Joined in 2015</span>
-                </Card.Meta>
-                <Card.Description>
-                    Study of quantum objects and interactions
-                </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-                <Button>Add Course</Button>
-            </Card.Content>
-        </Card>
+        <div className = "thetabs">
+            <Tab menu={{ fluid: true, vertical: true, tabular: true }} panes={newTabRender} />
+        </div>
     )
 }
 

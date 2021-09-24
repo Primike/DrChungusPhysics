@@ -1,10 +1,10 @@
-import Course from './Course'
+import CourseCard from './CourseCard'
 
 function Courses({courses}) {
     return (
         <>
             {courses.map((x) => (
-                <Course course = {x} key ={x.subject} />
+                <CourseCard course = {x} key ={x.subject} />
             ))}
             
         </>

@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import SignUp from "./SignUp";
 import UserHome from "./UserHome"
 import Courses from "./Courses";
+import Course from  "./Course"
 import Login from "./Login";
 import NavBar from "./NavBar";
 import WelcomePage from "./WelcomePage";
@@ -37,10 +38,11 @@ function App() {
             <Route path="/courses">
               <Courses courses = {courses}/>
             </Route>
-            {/* {courses.map((x) => (
-              <Route path = {`/${x.subject}`}
-
-            )} */}
+            {courses.map((x) => (
+              <Route path = {`/${x.subject}`} key ={`${x.subject}x`}>
+                <Course course={x} />
+              </Route>
+            ))}
             <Route path="/">
               <UserHome user={user}/>
             </Route>
