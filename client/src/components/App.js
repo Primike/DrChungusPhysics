@@ -8,6 +8,7 @@ import Login from "./Login";
 import NavBar from "./NavBar";
 import WelcomePage from "./WelcomePage";
 import 'semantic-ui-css/semantic.min.css'
+import NumericalMethods from "./NumericalMethods";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -37,6 +38,9 @@ function App() {
           <Switch>
             <Route path="/courses">
               <Courses courses = {courses}/>
+            </Route>
+            <Route path="/numericalmethods">
+              <NumericalMethods/>
             </Route>
             {courses.map((x) => (
               <Route path = {`/${x.subject}`} key ={`${x.subject}x`}>

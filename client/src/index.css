@@ -123,7 +123,7 @@ code {
   justify-content: space-between;
 }
 
-button {
+.quizbutton {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
@@ -145,14 +145,14 @@ button {
   background-color: #ff3333;
 }
 
-button:hover {
+.quizbutton:hover {
   background-color: #555e7d;
 }
 
-button:focus {
+.quizbutton:focus {
   outline: none;
 }
 
-button svg {
+.quizbutton svg {
   margin-right: 5px;
 }
