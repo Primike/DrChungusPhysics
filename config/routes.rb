@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :quiz_answers
+  resources :quiz_questions
   resources :chapters
   resources :user_courses
   resources :courses
