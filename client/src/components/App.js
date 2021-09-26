@@ -6,6 +6,7 @@ import Courses from "./Courses";
 import Course from  "./Course"
 import Login from "./Login";
 import NavBar from "./NavBar";
+import Graph from "./Graph.tsx";
 import WelcomePage from "./WelcomePage";
 import 'semantic-ui-css/semantic.min.css'
 import NumericalMethods from "./NumericalMethods";
@@ -13,6 +14,9 @@ import NumericalMethods from "./NumericalMethods";
 function App() {
   const [user, setUser] = useState(null);
   const [courses, setCourses] = useState([])
+
+  const [equation, setEquation] = useState()
+  const [derivative, setDerivative] = useState()
 
   useEffect(() => {
     // auto-login
@@ -29,7 +33,7 @@ function App() {
     .then(courses => setCourses(courses))
 }, [])
 
-
+console.log(equation, derivative)
   return (
     <>
       <NavBar user={user} setUser={setUser} />
@@ -40,7 +44,10 @@ function App() {
               <Courses courses = {courses}/>
             </Route>
             <Route path="/numericalmethods">
-              <NumericalMethods/>
+              <NumericalMethods setEquation = {setEquation} setDerivative={setDerivative} />
+            </Route>
+            <Route path="/graph">
+              <Graph equation = {equation} derivative = {derivative}/>
             </Route>
             {courses.map((x) => (
               <Route path = {`/${x.subject}`} key ={`${x.subject}x`}>
