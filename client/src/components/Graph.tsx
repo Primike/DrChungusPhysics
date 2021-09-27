@@ -6,11 +6,10 @@ let height = 800;
 let ratio = contentsBounds.width / width;
 width *= ratio;
 height *= ratio;
-let x = "1/x"
 
 function Graph({equation = "x^2", derivative = "2x"}) {
     return (
-        <div>
+        <rect>
             {functionPlot({
             title: `y = ${equation}`,
             target: "#root",
@@ -34,8 +33,8 @@ function Graph({equation = "x^2", derivative = "2x"}) {
                 }
             ]
             })}
-            {3}
-        </div>
+            <h1>qweqweqweqwe</h1>
+        </rect>
     )
 }
 

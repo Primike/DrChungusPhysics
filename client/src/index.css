@@ -156,3 +156,8 @@ code {
 .quizbutton svg {
   margin-right: 5px;
 }
+
+img {
+  height: 500px;
+  width: 600px;
+}

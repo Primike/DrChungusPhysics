@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 import { Switch, Route, NavLink } from "react-router-dom";
-import Graph from "./Graph.tsx";
+import functionPlot from "./Graph.tsx";
 
 function NumericalMethods({setEquation, setDerivative}) {
     // const [equation, setEquation] = useState()
