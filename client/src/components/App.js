@@ -7,6 +7,7 @@ import Course from  "./Course"
 import Login from "./Login";
 import NavBar from "./NavBar";
 import Graph from "./Graph.tsx";
+import Profile from "./Profile";
 import WelcomePage from "./WelcomePage";
 import 'semantic-ui-css/semantic.min.css'
 import NumericalMethods from "./NumericalMethods";
@@ -48,9 +49,12 @@ console.log(equation, derivative)
             <Route path="/graph">
               <Graph equation = {equation} derivative = {derivative}/>
             </Route>
+            <Route path="/profile">
+              <Profile user = {user}/>
+            </Route>
             {courses.map((x) => (
               <Route path = {`/${x.subject}`} key ={`${x.subject}x`}>
-                <Course course={x} />
+                <Course course={x} user = {user}/>
               </Route>
             ))}
             <Route path="/">

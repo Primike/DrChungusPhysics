@@ -6,24 +6,23 @@ import { create, all, math } from 'mathjs'
 function NumericalMethods({setEquation, setDerivative}) {
     const [f, setF] = useState("x")
     const [fprime, setfPrime] = useState("1")
+    const [gus,setGus] = useState()
     const math = create(all,  {})
     const parser = math.parser()
+    let guess = 1
 
-    console.log(f, fprime)
     function findRoot(e) {
         e.preventDefault()
         let eqn = f
         let der = fprime
-        let trials = 100
-        let guess = 6
+        let trials = 100     
         parser.evaluate(`f(x) = ${eqn}`)
         parser.evaluate(`g(x) = ${der}`)
 
         for (let i = 0; i < trials; i++) {
             guess = guess - parser.evaluate(`f(${guess})`)/parser.evaluate(`g(${guess})`)
         }
-        
-        console.log(guess.toFixed(10))       
+        setGus(guess.toFixed(10))    
     }
     
     return (
@@ -53,10 +52,7 @@ function NumericalMethods({setEquation, setDerivative}) {
                 </Form.Field>
                 <Button type="submit">Compute</Button>
             </Form>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <h3>Root = {gus}</h3>
 
             <h1>Function Grapher</h1>
             <Form className = "findroot">

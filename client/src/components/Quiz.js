@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Quiz({quizquestions}) {
+function Quiz({quizquestions, course, user}) {
 
     const questions = quizquestions.map((question) => {
         return {questionText: `${question.question}`,
@@ -26,6 +26,24 @@ function Quiz({quizquestions}) {
 			setShowScore(true);
 		}
 	};
+	console.log(course)
+
+		if (score == 5) {
+			fetch("/user_courses", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					user_id: user.id,
+					course_id: course.id,
+				}),
+				})
+				.then((resp) => resp.json())
+				.then((x) => {console.log(x)
+				});
+		}
+
 	return (
 		<div className='app'>
 			{showScore ? (
