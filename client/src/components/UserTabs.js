@@ -30,6 +30,11 @@ function UserTabs({handleLogoutClick}) {
                         Testimonials
                     </NavLink>
                 </Menu.Item>
+                <Menu.Item>
+                    <NavLink exact to = "/profile">
+                        Profile
+                    </NavLink>
+                </Menu.Item>
             </Menu>
             <Button onClick={handleLogoutClick}>Logout</Button>
         </>

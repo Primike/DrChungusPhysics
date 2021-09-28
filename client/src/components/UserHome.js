@@ -9,8 +9,6 @@ function UserHome({user}) {
         .then(x => setDailyPic(x))
     }, [])
 
-    console.log(dailypic)
-
     return (
         <>
             {dailypic ? (

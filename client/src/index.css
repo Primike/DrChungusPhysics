@@ -70,7 +70,7 @@ code {
 }
 
 .app {
-  background-color: #576fc5;
+  background-color: #96a8f0;
   width: 450px;
   min-height: 200px;
   height: min-content;
@@ -127,13 +127,13 @@ code {
   width: 100%;
   font-size: 16px;
   color: #ffffff;
-  background-color: #252d4a;
+  background-color: #2f8ca3;
   border-radius: 15px;
   display: flex;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
-  border: 5px solid #3a6ea1;
+  border: 5px solid #101820;
   cursor: pointer;
 }
 
@@ -161,3 +161,8 @@ img {
   height: 500px;
   width: 600px;
 }
+
+/* iframe
+{
+    display: none;
+} */
