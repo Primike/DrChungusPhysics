@@ -17,7 +17,6 @@ function App() {
   const [user, setUser] = useState(null);
   const [courses, setCourses] = useState([])
   const [testimonials, setTestimonials] = useState([])
-  const [usercourses, setUserCourses] = useState([])
   const [equation, setEquation] = useState()
   const [derivative, setDerivative] = useState()
 
@@ -34,12 +33,6 @@ function App() {
     .then(res => res.json())
     .then(courses => setCourses(courses))
 }, [])
-
-  // useEffect(() => {
-  //   fetch('/user_courses')
-  //   .then(res => res.json())
-  //   .then(usercourses => setUserCourses(usercourses))
-  // }, [])
 
   useEffect(() => {
     fetch('/testimonials')

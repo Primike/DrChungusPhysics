@@ -2,7 +2,6 @@ import { Card, Image, Button } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 function CourseCard({course}) {
-    console.log(course)
     return (
         <Card>
             <Image src={course.subject_image} wrapped ui={false} />

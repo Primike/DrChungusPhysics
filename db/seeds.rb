@@ -1,8 +1,4 @@
 Course.create(subject: 'Quantum Mechanics', subject_image: "https://scx2.b-cdn.net/gfx/news/hires/2015/5666a45b218f7.jpg", completed: false)
-Course.create(subject: 'Classical Mechanics', subject_image: "https://cdn1.byjus.com/wp-content/uploads/2018/11/physics/wp-content/uploads/2016/08/3.png", completed: false)
-Course.create(subject: 'Electricity and Magnetism', subject_image: "https://cdn.vox-cdn.com/thumbor/1ZPuV80n_PVUARYlkcCorFG_Frk=/0x0:3000x3000/1200x800/filters:focal(1260x1260:1740x1740)/cdn.vox-cdn.com/uploads/chorus_image/image/50911339/electricity.0.jpg", completed: false)
-Course.create(subject: 'General Relativity', subject_image: "https://static.scientificamerican.com/blogs/cache/file/BF34DFF9-BBE0-4079-B998E97CA9EAFEB1.jpg", completed: false)
-Course.create(subject: 'Thermodynamics', subject_image: "https://sciencenotes.org/wp-content/uploads/2015/10/energyball.jpg", completed: false)
 
 Chapter.create(title: "Electrons", content: "Electrons are particles that can usually be found around the nucleous of atoms. Electrons have a very small amount of mass but have no size. Electrons are actually not like the balls in the picture but are points with no volume. All electrons are identical and it is impossible to distinguish one from another. Since electrons and other particles are very small their quantum properties are visible in experiments. Larger objects like animals have basically invisible quantum properties.", image: "https://circuitglobe.com/wp-content/uploads/2020/05/structure-of-atom1.jpg", course_id: Course.find_by(subject: "Quantum Mechanics").id)
 Chapter.create(title: "Wave Particle Duality", content: "In the double slit experiment light particles were shot from a laser through two openings called slits. Since they were particles they were expected to hit the board and create 2 rectangles like what would happen if you shot paintballs. Instead they created a wave like pattern in the board. This experiment led to the conclusion that light was both a wave and a particle. A wave would mean a kind of cloud of probabilities. All particles share this feature with light.", image: "https://quantumpreception.files.wordpress.com/2019/01/doubleslottest-1400x793-71-2.jpg", course_id: Course.find_by(subject: "Quantum Mechanics").id)
@@ -33,3 +29,43 @@ QuizAnswer.create(answer: "a wave", correct: false, quiz_question_id: QuizQuesti
 QuizAnswer.create(answer: "a particle", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a proton").id)
 QuizAnswer.create(answer: "a point", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a proton").id)
 QuizAnswer.create(answer: "a wave and a particle", correct: true, quiz_question_id: QuizQuestion.find_by(question: "What is a proton").id)
+
+
+
+
+
+Course.create(subject: 'Electricity and Magnetism', subject_image: "https://cdn.vox-cdn.com/thumbor/1ZPuV80n_PVUARYlkcCorFG_Frk=/0x0:3000x3000/1200x800/filters:focal(1260x1260:1740x1740)/cdn.vox-cdn.com/uploads/chorus_image/image/50911339/electricity.0.jpg", completed: false)
+
+Chapter.create(title: "Curl and Divergence", content: "Electric fields caused by a particle with a positive charge act like the picture on the left. The particle produces a field that diverges from the particle in all directions. If the particle had a negative charge then the arrows would point inward. A magnetic field caused by a magnet is shown in the left. The magnetic field curls around the source otherwise know as current. The direction of current indicates whether the magnetic field will be clockwise or counter clockwise", image: "https://i.ytimg.com/vi/OK4w44GHJNc/maxresdefault.jpg", course_id: Course.find_by(subject: "Electricity and Magnetism").id)
+Chapter.create(title: "Charge", content: "Particles may have positive, negative or no charges. A particle with a positive charge will attract a particle with a negative charge. If a particle has no charge like a neutron then it is unaffected by charges and electric fields. In this picture a particle with a negative electric field attracts a particle with a positive electric field", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/VFPt_charges_plus_minus_thumb.svg/1200px-VFPt_charges_plus_minus_thumb.svg.png", course_id: Course.find_by(subject: "Electricity and Magnetism").id)
+Chapter.create(title: "Coulomb's Law", content: "This is coulombs law. It describes a force between two objects. The force is equal to a number constant k multiplied by the total charge of one object q1 and by the total charge of the other object q2 all divided by the distance(r) between them squared. Like charges repel and opposite charges attract.", image: "https://www.sciencefacts.net/wp-content/uploads/2021/06/Coulombs-Law.jpg", course_id: Course.find_by(subject: "Electricity and Magnetism").id)
+Chapter.create(title: "Gauss's Law", content: "This is Gauss's law it states that if an object is symmetric its charge can be determined by mathematically enclosing it in a symmetric surface like a sphere. The flux of electric field through each tiny area of sphere all summed up is the charge of the inside object", image: "https://qph.fs.quoracdn.net/main-qimg-332bcd17bece2ff3fac427d6261cccb0", course_id: Course.find_by(subject: "Electricity and Magnetism").id)
+Chapter.create(title: "Conductors", content: "This is a conductor. Conductors like metals greatly facilitate the travel of particles within them and as such these particles tend to head toward the surface of the conductor when an electric field is applied. The electric field inside a conductor is 0 since the particles on the surface cancel out the field in all directions measured from inside the conductor", image: "https://files.mtstatic.com/site_4539/4215/0?Expires=1632692299&Signature=tANqvUHEb0VhDVGfRFnXLWBgbci-L2NxQR5EUZNZxK1Yh1-yEIOvZRWgRsF2dTiBiJqp64EOjSO5hqKeF1hfR7~93l3p~HMxLCGoONqA98gqe9w~vpOJQ-0-B4RGvVNPZlJtlPWAgL4UAIO4wIZn651IRDrHEUvwvU5quYlp46Y_&Key-Pair-Id=APKAJ5Y6AV4GI7A555NA", course_id: Course.find_by(subject: "Electricity and Magnetism").id)
+Chapter.create(title: "Magnetic Field", content: "This is a magnetic field it is cause by a current which is just a flow of electrons called current. The direction of the magnetic field depends on the the direction of current. If you point your thumb along the direction of current then the magnetic field will be in the direction your fingers curl", image: "https://i.stack.imgur.com/4iM3O.jpg", course_id: Course.find_by(subject: "Electricity and Magnetism").id)
+
+QuizQuestion.create(question: "What is a electronz", course_id: Course.find_by(subject: "Electricity and Magnetism").id )
+QuizQuestion.create(question: "What is a photonz", course_id: Course.find_by(subject: "Electricity and Magnetism").id )
+QuizQuestion.create(question: "What is a protonz", course_id: Course.find_by(subject: "Electricity and Magnetism").id )
+
+QuizAnswer.create(answer: "a wave", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a electronz").id)
+QuizAnswer.create(answer: "a particle", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a electronz").id)
+QuizAnswer.create(answer: "a point", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a electronz").id)
+QuizAnswer.create(answer: "a wave and a particle", correct: true, quiz_question_id: QuizQuestion.find_by(question: "What is a electronz").id)
+
+QuizAnswer.create(answer: "a wave", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a photonz").id)
+QuizAnswer.create(answer: "a particle", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a photonz").id)
+QuizAnswer.create(answer: "a point", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a photonz").id)
+QuizAnswer.create(answer: "a wave and a particle", correct: true, quiz_question_id: QuizQuestion.find_by(question: "What is a photonz").id)
+
+QuizAnswer.create(answer: "a wave", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a protonz").id)
+QuizAnswer.create(answer: "a particle", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a protonz").id)
+QuizAnswer.create(answer: "a point", correct: false, quiz_question_id: QuizQuestion.find_by(question: "What is a protonz").id)
+QuizAnswer.create(answer: "a wave and a particle", correct: true, quiz_question_id: QuizQuestion.find_by(question: "What is a protonz").id)
+
+
+
+
+
+Course.create(subject: 'Classical Mechanics', subject_image: "https://cdn1.byjus.com/wp-content/uploads/2018/11/physics/wp-content/uploads/2016/08/3.png", completed: false)
+Course.create(subject: 'General Relativity', subject_image: "https://static.scientificamerican.com/blogs/cache/file/BF34DFF9-BBE0-4079-B998E97CA9EAFEB1.jpg", completed: false)
+Course.create(subject: 'Thermodynamics', subject_image: "https://sciencenotes.org/wp-content/uploads/2015/10/energyball.jpg", completed: false)

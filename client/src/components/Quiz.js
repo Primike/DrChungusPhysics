@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Quiz({quizquestions, course, user}) {
 
@@ -25,10 +25,11 @@ function Quiz({quizquestions, course, user}) {
 		} else {
 			setShowScore(true);
 		}
-	};
-	console.log(course)
 
-		if (score == 3) {
+		
+	};
+	console.log(user, course)
+		if (score === 3) {
 			fetch("/user_courses", {
 				method: "POST",
 				headers: {
@@ -49,6 +50,12 @@ function Quiz({quizquestions, course, user}) {
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
+					{score === 3 ? (
+						<>
+							<p>You passed the course!</p>
+							<button>Retake the course</button>
+						</>
+						):(<p></p>)}
 				</div>
 			) : (
 				<>

@@ -5,11 +5,11 @@ import Quiz from './Quiz';
 function Course({course, user}) {
     let newTabRender = [];
 
-    course.chapters.map((chapter) => {
-        return newTabRender.push({menuItem: `Ch ${chapter.id} ${chapter.title}`, render: () => <Tab.Pane> <Chapter key={chapter.title} chapter = {chapter}/> </Tab.Pane>})
+    course.chapters.map((chapter, index) => {
+        return newTabRender.push({menuItem: `Ch ${index + 1} ${chapter.title}`, render: () => <Tab.Pane> <Chapter key={chapter.title} chapter = {chapter}/> </Tab.Pane>})
     })
 
-    newTabRender.push({menuItem: `${course.subject} Quiz`, render: () => <Tab.Pane> <Quiz quizquestions = {course.quiz_questions} course={course} user= {user}/> </Tab.Pane>})
+    newTabRender.push({menuItem: `${course.subject} Quiz`, render: () => <Tab.Pane> <Quiz quizquestions = {course.quiz_questions} course={course} user={user}/> </Tab.Pane>})
 
     return (
         <div className = "chaptertabs">
