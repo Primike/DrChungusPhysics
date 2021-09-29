@@ -28,7 +28,7 @@ function Quiz({quizquestions, course, user}) {
 	};
 	console.log(course)
 
-		if (score == 5) {
+		if (score == 3) {
 			fetch("/user_courses", {
 				method: "POST",
 				headers: {

@@ -1,7 +1,7 @@
 import { Card, Image, Button } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
-function CourseCard({course}) {
+function CompletedCourse({course}) {
     console.log(course)
     return (
         <Card>
@@ -22,4 +22,4 @@ function CourseCard({course}) {
     )
 }
 
-export default CourseCard
+export default CompletedCourse

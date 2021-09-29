@@ -1,5 +1,5 @@
 class UserCourseSerializer < ActiveModel::Serializer
-  attributes :id
-  has_one :user
+  attributes :id, :user_id, :course_id
+  belongs_to :user
   has_one :course
 end

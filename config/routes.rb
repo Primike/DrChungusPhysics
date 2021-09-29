@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :testimonials
   resources :quiz_answers
   resources :quiz_questions
   resources :chapters
