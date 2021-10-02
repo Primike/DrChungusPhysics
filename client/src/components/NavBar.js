@@ -1,4 +1,3 @@
-import React from "react";
 import UserTabs from "./UserTabs"
 import { NavLink } from "react-router-dom";
 import { Button } from 'semantic-ui-react'
@@ -13,15 +12,15 @@ function NavBar({ user, setUser }) {
   }
 
   return (
-    <header className = "headerz">
+    <header className = "alltabs">
         {user ? (
           <UserTabs handleLogoutClick = {handleLogoutClick}/>
         ) : (
-          <>
-            <Button><NavLink to="/">Home</NavLink></Button>
-            <Button><NavLink to="/signup">Signup</NavLink></Button>
-            <Button><NavLink to="/login">Login</NavLink></Button>
-          </>
+          <div className="firstlinks">
+            <Button size='massive'><NavLink to="/">Home</NavLink></Button>
+            <Button size='massive'><NavLink to="/signup">Signup</NavLink></Button>
+            <Button size='massive'><NavLink to="/login">Login</NavLink></Button>
+          </div>
         )}
     </header>
   );

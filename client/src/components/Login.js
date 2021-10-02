@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Button, Form } from 'semantic-ui-react'
 
 function Login({ setUser }) {
   const [username, setUsername] = useState("");
@@ -21,8 +22,9 @@ function Login({ setUser }) {
 
   return (
     <div className = "logindiv">
-      <form className ="login" onSubmit={handleSubmit}>
+      <Form className ="login" onSubmit={handleSubmit}>
         <h1>Login</h1>
+        <Form.Field>
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -31,6 +33,8 @@ function Login({ setUser }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        </Form.Field>
+        <Form.Field>
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -39,8 +43,9 @@ function Login({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
-      </form>
+        </Form.Field>
+        <Button type="submit">Login</Button>
+      </Form>
     </div>
   );
 }

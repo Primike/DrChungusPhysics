@@ -15,7 +15,7 @@ function NumericalMethods({setEquation, setDerivative}) {
         e.preventDefault()
         let eqn = f
         let der = fprime
-        let trials = 100     
+        let trials = 1000     
         parser.evaluate(`f(x) = ${eqn}`)
         parser.evaluate(`g(x) = ${der}`)
 

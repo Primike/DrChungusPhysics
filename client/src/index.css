@@ -11,6 +11,7 @@
   -o-background-size: cover;
   background-size: cover; */
   margin: 0rem;
+  background-color: #cad49a;
 }
 
 code {
@@ -18,68 +19,177 @@ code {
     monospace;
 }
 
-.headerz {
+/* Navbar//////////////////////////////////////////////////// */
+
+.firstlinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff8e7;
+  background-color: #111647;
+  padding: 10px;
+}
+
+.menuitems {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111647;
+  padding: 10px;
+}
+
+
+/* Welcome pages//////////////////////////////////////////////////// */
+
+.welcomediv {
+  display: flex;
+  flex-direction: row;
+}
+
+.welcomechungus {
+  width: 35%;
+  height: 860px;
+  position: relative;
+  float: right;
+  background-color: rgb(54, 128, 151);
+  border: 7px solid rgb(0, 0, 0);
+  background: url("https://png.pngtree.com/thumb_back/fw800/background/20210115/pngtree-vector-original-ai-layered-rock-granite-marble-background-image_528250.jpg") no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 8px;
+}
+
+.welcometitle {
+  text-align: center;
+  font-size:60px;
+  font-weight: bold;
+}
+.welcometext {
+  text-align: center;
+  font-size:40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.bigchungus {
+  height: 400px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 6px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.welcomephoto {
+  width: 65%;
+  height: 860px;
+  position: relative;
+  float: right;
+  background: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pillars_of_creation.jpg") no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .signupdiv {
   display: flex;
   flex-direction: row;
-  background: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pillars_of_creation.jpg") no-repeat center center fixed; 
+  background: url("https://i.natgeofe.com/k/b444c8c2-7cef-4d09-801b-6b13044f0646/a-8-hubble-space-telescope-crab-nebula.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .signup {
-  background-color: #fff8e7;
-  border: 3px solid rgb(0, 0, 0);
+  background-color: #e7d7b0;
+  border: 5px solid rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   width: 400px;
-  margin: 0 auto;
   padding: 0 1rem 1rem;
   height: 700px;
 }
 
-.login {
-  background-color: #fff8e7;
-  border: 3px solid rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin: 0 auto;
-  padding: 0 1rem 1rem;
-  height: 200px;
-}
 .logindiv {
   display: flex;
   flex-direction: row;
-  background: url("https://i.pinimg.com/originals/99/4a/c2/994ac21c38ce0962e475441caa400e69.gif") no-repeat center center fixed; 
+  background: url("https://cdn.theatlantic.com/media/img/photo/2020/11/2020-hubble-space-telescope-advent/a01_heic1608b-1/original.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 900px;
+  display: flex;
+  justify-content: center;
 }
 
-.app {
-  background-color: #96a8f0;
-  width: 450px;
-  min-height: 200px;
-  height: min-content;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+.login {
+  background-color: #e7d7b0;
+  border: 5px solid rgb(0, 0, 0);
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  width: 400px;
+  padding: 0 1rem 1rem;
+  height: 300px;
+  margin-top: 100px;
 }
+
+
+/* Userhome//////////////////////////////////////////////////// */
+.userhome {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.nasaimage {
+  width: 100%;
+  height: 860px;
+  position: relative;
+  float: right;
+
+}
+
+.welcomenasa {
+  text-align: center;
+  font-size:40px;
+  font-weight: bold;
+}
+
+.nasatext {
+  align-items: center;
+  text-align: center;
+  font-size:20px;
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+/* Courses/////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .score-section {
   display: flex;

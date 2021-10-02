@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom"
 
 function UserTabs({handleLogoutClick}) {
     return (
-        <>
-            <Menu>
+        <div className = "usertabs">
+            <Menu className = "menuitems" color="black" inverted widths={7} size='massive'>
                 <Menu.Item>
                     <NavLink exact to = "/">
-                        Home
+                        Dr Chungus Home
                     </NavLink>
                 </Menu.Item>
                 <Menu.Item>
@@ -35,9 +35,12 @@ function UserTabs({handleLogoutClick}) {
                         Profile
                     </NavLink>
                 </Menu.Item>
+                <Menu.Item>
+                    <Button onClick={handleLogoutClick}>Logout</Button>
+                </Menu.Item>
             </Menu>
-            <Button onClick={handleLogoutClick}>Logout</Button>
-        </>
+
+        </div>
     )
 }
 

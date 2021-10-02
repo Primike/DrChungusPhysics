@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Divider, Grid, Image, Segment } from 'semantic-ui-react'
 
 function UserHome({user}) {
 
@@ -10,21 +11,30 @@ function UserHome({user}) {
     }, [])
 
     return (
-        <>
+        <div >
             {dailypic ? (
                 <>
-                <h1>Welcome, {user.username}! here is you NASA pic of the day</h1>
-                <br/>
-                <h2>{dailypic.title}</h2>
-                <h3>{dailypic.date}</h3>
-                <a href={dailypic.url}>
-                    <img src={dailypic.url} alt = {dailypic.title}/>
-                </a>
-                <p>{dailypic.explanation}</p>
+                <Segment className="userhome">
+                    <Grid columns={2} relaxed='very'>
+                        <Grid.Column>
+                            <a href={dailypic.url} >
+                                <img src={dailypic.url} alt = {dailypic.title} className = "nasaimage"/>
+                            </a>
+                        </Grid.Column>
+                        <Grid.Column className = "nasatext">
+                            <h1 className = "welcomenasa">Welcome, {user.username}! here is you NASA pic of the day</h1>
+                            <h2>{dailypic.title}</h2>
+                            <h3>{dailypic.date}</h3>             
+                            <p>{dailypic.explanation}</p>
+                        </Grid.Column>
+                    </Grid>
+
+                    <Divider vertical></Divider>
+                </Segment>              
             </>
             ) 
             : (<h1></h1>)}
-        </>
+        </div>
     )
 }
 
