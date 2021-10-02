@@ -11,7 +11,7 @@
   -o-background-size: cover;
   background-size: cover; */
   margin: 0rem;
-  background-color: #cad49a;
+  background-color: #e7d7b0;
 }
 
 code {
@@ -146,7 +146,6 @@ code {
 .userhome {
   display: flex;
   flex-direction: row;
-
 }
 
 .nasaimage {
@@ -173,9 +172,21 @@ code {
 
 /* Courses/////////////////////////////////////////////// */
 
+.courses {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+}
 
+div.ui.card {
+  width: 100%;
+  align-items: center;
+}
 
-
+.courseimage {
+  width: 390px;
+  height: 400px;
+}
 
 
 
@@ -267,10 +278,10 @@ code {
   margin-right: 5px;
 }
 
-img {
+/* img {
   height: 500px;
   width: 600px;
-}
+} */
 
 /* iframe
 {
