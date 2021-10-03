@@ -5,11 +5,6 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: url("https://media-exp1.licdn.com/dms/image/C4D1BAQGAO9zvVhyAqQ/company-background_10000/0/1539806088038?e=2159024400&v=beta&t=5vq2-UBGsfB5RPQaOHqFEHtmdq47wFGYL27qOMblKwc") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
   margin: 0rem;
   background-color: #ffffff;
 }
@@ -284,8 +279,23 @@ div.ui.card {
 
 /* Profile/////////////////////////////////////////////////////////////////// */
 
+.editdiv {
+  display: flex;
+  flex-direction: row;
+  background: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/potw2139a.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
+.thetabs {
+  padding: 10px;
+}
 
 
 

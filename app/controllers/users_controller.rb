@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    rescue_from ActiveRecord::RecordNotFound, with: :not_found
     before_action :authorize, only: [:show]
   
     def create
@@ -15,6 +16,12 @@ class UsersController < ApplicationController
       user = User.find_by(id: session[:user_id])
       render json: user, include: ['courses']
     end
+
+    def update 
+      user = User.find(params[:id])
+      user.update(user_params)
+      render json: user
+    end
   
     private
   
@@ -25,5 +32,8 @@ class UsersController < ApplicationController
     def user_params
       params.permit(:username, :password, :password_confirmation,:first_name, :last_name, :email, :image_url)
     end
-  
+
+    def not_found
+      render json: {error: "Not found"}, status: :not_found
+    end
 end

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Divider, Grid, Image, Segment } from 'semantic-ui-react'
+import { Divider, Grid, Segment } from 'semantic-ui-react'
 
 function UserHome({user}) {
 

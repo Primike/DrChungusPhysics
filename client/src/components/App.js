@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./SignUp";
 import UserHome from "./UserHome"
@@ -59,7 +59,7 @@ function App() {
               <Graph equation = {equation} derivative = {derivative}/>
             </Route>
             <Route path="/profile">
-              <Profile user = {user} courses = {user.courses}/>
+              <Profile user = {user} setUser={setUser}/>
             </Route>
             <Route path="/testimonials">
               <Testimonials testimonials = {testimonials} handleAddTestimonial={handleAddTestimonial}/>
