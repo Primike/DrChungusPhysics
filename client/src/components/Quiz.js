@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Button, } from 'semantic-ui-react'
 
 function Quiz({quizquestions, course, user, usercourse, setUserCourse}) {
 
@@ -66,36 +67,40 @@ function Quiz({quizquestions, course, user, usercourse, setUserCourse}) {
 	return (
 		<div className='quiz'>
 			{usercourse.length>0 ? 
-						<>
-							<p>You passed the course!</p>
-							<img src ="https://c.tenor.com/JUiXaPL-bNoAAAAd/big-chungus.gif" alt="bigchungus"/>
-							<button onClick={() => clicker()}>Retake the course</button>
-						</>:
+						<h1 className='retakesection'>							
+							<p className="youpassed">You passed the course!</p>
+							<img className = "rechungus" src ="https://c.tenor.com/JUiXaPL-bNoAAAAd/big-chungus.gif" alt="bigchungus"/>
+							<Button size='huge' className = "retake" onClick={() => clicker()}>Retake the course</Button>
+						</h1>
+						:
 			<>
 			{showScore ? (
-				<div className='score-section'>
+				<h1 className='scoresection'>
 					You scored {score} out of {questions.length}
 					{score === 3 ? (
 						<>
-							<p>You passed the course!</p>
-							<img src ="https://c.tenor.com/JUiXaPL-bNoAAAAd/big-chungus.gif" alt="bigchungus"/>
+							<p className="youpassed">You passed the course!</p>
+							<img className = "passchungus" src ="https://c.tenor.com/-zRUM3RMM64AAAAM/big-chungus.gif" alt="bigchungus"/>
 						</>
-						):(<></>)}
-				</div>
+						):(<>
+								<p className="youpassed">Keep Studying!</p>
+								<img className = "passchungus" src ="https://i.imgflip.com/31ihns.jpg" alt="bigchungus"/>
+							</>)}
+				</h1>
 			) : (
-				<>
-					<div className='question-section'>
-						<div className='question-count'>
+				<div className = "quizsection">
+					<div>
+						<div className="questionnumber">
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
 						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
+						<div className="quesitontext">{questions[currentQuestion].questionText}</div>
 					</div>
-					<div className='answer-section'>
+					<div className='answers'>
 						{questions[currentQuestion].answerOptions.map((answerOption, index) => (
-							<button className = "quizbutton" key = {`${index}+${answerOption}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							<Button size='huge' className = "quizbutton" key = {`${index}+${answerOption}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{index+1}. {answerOption.answerText}</Button>
 						))}
 					</div>
-				</>
+				</div>
 			)}
 			</>}
 		</div>
