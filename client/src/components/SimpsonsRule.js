@@ -38,44 +38,20 @@ function SimpsonsRule () {
             <Form onSubmit={computeIntegral} className = "findroot">
                 <h1>Simpson's Rule</h1>
                 <Form.Field>
-                <label htmlFor="username">Equation:</label>
-                <input
-                    placeholder='Equation'
-                    type="text"
-                    id="f"
-                    autoComplete="off"
-                    onChange={(e) => setF(e.target.value)}
-                />
+                    <h3>Equation:</h3>
+                    <Form.Input width={4} placeholder='Equation' onChange={(e) => setF(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                <label htmlFor="username">Start Point:</label>
-                <input
-                    placeholder='Start'
-                    type="text"
-                    id="f"
-                    autoComplete="off"
-                    onChange={(e) => setStart(e.target.value)}
-                />
+                    <h3>Start Point:</h3>
+                    <Form.Input width={4} placeholder='Start' onChange={(e) => setStart(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                <label htmlFor="username">End Point:</label>
-                <input
-                    placeholder='End'
-                    type="text"
-                    id="f"
-                    autoComplete="off"
-                    onChange={(e) => setEnd(e.target.value)}
-                />
+                    <h3>End Point:</h3>
+                    <Form.Input width={4} placeholder='End' onChange={(e) => setEnd(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                <label htmlFor="username">Intervals:</label>
-                <input
-                    placeholder='Intervals'
-                    type="text"
-                    id="f"
-                    autoComplete="off"
-                    onChange={(e) => setIntervals(e.target.value)}
-                />
+                    <h3>Intervals:</h3>
+                    <Form.Input width={4} placeholder='Intervals' onChange={(e) => setIntervals(e.target.value)}/>
                 </Form.Field>
                 <Button type="submit">Compute</Button>
             </Form>

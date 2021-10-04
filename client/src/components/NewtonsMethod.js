@@ -30,34 +30,16 @@ function NewtonsMethod () {
             <Form onSubmit={findRoot} className = "findroot">
                 <h1>Newton's Method</h1>
                 <Form.Field>
-                <label htmlFor="username">Equation:</label>
-                <input
-                    placeholder='Equation'
-                    type="text"
-                    id="f"
-                    autoComplete="off"
-                    onChange={(e) => setF(e.target.value)}
-                />
+                    <h3>Equation:</h3>
+                    <Form.Input width={4} placeholder='Equation' onChange={(e) => setF(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                <label htmlFor="username">Initial Guess:</label>
-                <input
-                    placeholder='Initial Guess'
-                    type="text"
-                    id="gues"
-                    autoComplete="off"
-                    onChange={(e) => setGues(e.target.value)}
-                />
+                    <h3>Initial Guess:</h3>
+                    <Form.Input width={4} placeholder='Initial Guess' onChange={(e) => setGues(e.target.value)}/>
                 </Form.Field>
                 <Form.Field>
-                <label htmlFor="username">Trials:</label>
-                <input
-                    placeholder='Trials'
-                    type="text"
-                    id="trials"
-                    autoComplete="off"
-                    onChange={(e) => setTrialz(e.target.value)}
-                />
+                    <h3>Trials:</h3>
+                    <Form.Input width={4} placeholder='Trials' onChange={(e) => setTrialz(e.target.value)}/>
                 </Form.Field>
                 <Button type="submit">Compute</Button>
             </Form>
