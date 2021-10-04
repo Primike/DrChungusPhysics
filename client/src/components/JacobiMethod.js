@@ -1,6 +1,6 @@
-import { create, all, math} from 'mathjs'
+import { create, all } from 'mathjs'
 import { useState } from 'react'
-import { Form, Button, Input } from 'semantic-ui-react'
+import { Form, Button, Divider, Grid, Segment } from 'semantic-ui-react'
 
 function JacobiMethod() {
     const math = create(all,  {})
@@ -44,48 +44,60 @@ function JacobiMethod() {
     }
 
     return (
-        <div>
-            <Form onSubmit={solveEquations} className = "solvequations">
-                <h1>Jacobi Method</h1>
-                <h3>Matrix:</h3>
-                <Form.Group>
-                    <Form.Input width={1} onChange={(e) => setZeroZero(e.target.value)}/>
-                    <Form.Input width={1} onChange={(e) => setZeroOne(e.target.value)}/>
-                    <Form.Input width={1} onChange={(e) => setZeroTwo(e.target.value)}/>
-                    <label> = </label>
-                    <Form.Input width={1} onChange={(e) => setBOne(e.target.value)}/>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Input width={1} onChange={(e) => setOneZero(e.target.value)}/>
-                    <Form.Input width={1} onChange={(e) => setOneOne(e.target.value)}/>
-                    <Form.Input width={1} onChange={(e) => setOneTwo(e.target.value)}/>
-                    <label> = </label>
-                    <Form.Input width={1} onChange={(e) => setBTwo(e.target.value)}/>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Input width={1} onChange={(e) => setTwoZero(e.target.value)}/>
-                    <Form.Input width={1} onChange={(e) => setTwoOne(e.target.value)}/>
-                    <Form.Input width={1} onChange={(e) => setTwoTwo(e.target.value)}/>
-                    <label> = </label>
-                    <Form.Input width={1} onChange={(e) => setBThree(e.target.value)}/>
-                </Form.Group>
-                <h3>Inital Guess Vector:</h3>
-                <Form.Group>
-                    <Form.Input width={1} onChange={(e) => setZeroZerou(e.target.value)}/>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Input width={1} onChange={(e) => setZeroOneu(e.target.value)}/>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Input width={1} onChange={(e) => setZeroTwou(e.target.value)}/>
-                </Form.Group>
-                <h3>Trails:</h3>
-                <Form.Group>
-                    <Form.Input width={1} onChange={(e) => setTrialz(e.target.value)}/>
-                </Form.Group>   
-                <Button type="submit">Compute</Button>
-            </Form>
-            <h2>Solution: x = {solutionz[0].toFixed(5)} y = {solutionz[1].toFixed(5)} z = {solutionz[2].toFixed(5)}</h2>
+        <div className = "numericalmethoddiv">
+            <Segment>
+                <Grid columns={2} relaxed='very'>
+                    <Grid.Column className = "jacobimethod" >
+                        <Form onSubmit={solveEquations} className = "solvequations">
+                            <h1 className="methodtitle">Jacobi Method</h1>
+                            <h3>Matrix:</h3>
+                            <Form.Group>
+                                <Form.Input width={1} onChange={(e) => setZeroZero(e.target.value)}/>
+                                <Form.Input width={1} onChange={(e) => setZeroOne(e.target.value)}/>
+                                <Form.Input width={1} onChange={(e) => setZeroTwo(e.target.value)}/>
+                                <label> = </label>
+                                <Form.Input width={1} onChange={(e) => setBOne(e.target.value)}/>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Input width={1} onChange={(e) => setOneZero(e.target.value)}/>
+                                <Form.Input width={1} onChange={(e) => setOneOne(e.target.value)}/>
+                                <Form.Input width={1} onChange={(e) => setOneTwo(e.target.value)}/>
+                                <label> = </label>
+                                <Form.Input width={1} onChange={(e) => setBTwo(e.target.value)}/>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Input width={1} onChange={(e) => setTwoZero(e.target.value)}/>
+                                <Form.Input width={1} onChange={(e) => setTwoOne(e.target.value)}/>
+                                <Form.Input width={1} onChange={(e) => setTwoTwo(e.target.value)}/>
+                                <label> = </label>
+                                <Form.Input width={1} onChange={(e) => setBThree(e.target.value)}/>
+                            </Form.Group>
+                            <h3>Inital Guess Vector:</h3>
+                            <Form.Group>
+                                <Form.Input width={1} onChange={(e) => setZeroZerou(e.target.value)}/>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Input width={1} onChange={(e) => setZeroOneu(e.target.value)}/>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Input width={1} onChange={(e) => setZeroTwou(e.target.value)}/>
+                            </Form.Group>
+                            <h3>Trails:</h3>
+                            <Form.Group>
+                                <Form.Input width={1} onChange={(e) => setTrialz(e.target.value)}/>
+                            </Form.Group>   
+                            <Button type="submit">Compute</Button>
+                        </Form>
+                        <h2>Solution: x = {solutionz[0].toFixed(5)} y = {solutionz[1].toFixed(5)} z = {solutionz[2].toFixed(5)}</h2>
+                    </Grid.Column>
+                    <Grid.Column className = "jacobimethod">
+                        <a href="https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/d3fd06c8-d832-46a4-b187-546cb17a8065/465c4d5d-4cb8-4ce3-a959-fc12475866b9/images/screenshot.jpg" >
+                            <img src="https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/d3fd06c8-d832-46a4-b187-546cb17a8065/465c4d5d-4cb8-4ce3-a959-fc12475866b9/images/screenshot.jpg" alt = 'numericalimage' className = "numericalimage"/>
+                        </a>
+                    </Grid.Column>
+                </Grid>
+                <Divider vertical></Divider>
+            </Segment>
         </div>
     )
 }

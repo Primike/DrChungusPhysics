@@ -1,5 +1,5 @@
-import { create, all, math } from 'mathjs'
-import { Form, Button } from 'semantic-ui-react'
+import { create, all } from 'mathjs'
+import { Form, Button, Divider, Grid, Segment } from 'semantic-ui-react'
 import { useState } from "react";
 
 function NewtonsMethod () {
@@ -26,25 +26,37 @@ function NewtonsMethod () {
     }
 
     return (
-        <>
-            <Form onSubmit={findRoot} className = "findroot">
-                <h1>Newton's Method</h1>
-                <Form.Field>
-                    <h3>Equation:</h3>
-                    <Form.Input width={4} placeholder='Equation' onChange={(e) => setF(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <h3>Initial Guess:</h3>
-                    <Form.Input width={4} placeholder='Initial Guess' onChange={(e) => setGues(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <h3>Trials:</h3>
-                    <Form.Input width={4} placeholder='Trials' onChange={(e) => setTrialz(e.target.value)}/>
-                </Form.Field>
-                <Button type="submit">Compute</Button>
-            </Form>
-            <h3>Root = {solut}</h3>
-        </>
+        <div className = "numericalmethoddiv">
+            <Segment>
+                <Grid columns={2} relaxed='very'>
+                    <Grid.Column className = "newtonsmethod" >
+                        <Form onSubmit={findRoot} className = "findroot">
+                            <h1 className="methodtitle">Newton's Method</h1>
+                            <Form.Field>
+                                <h3>Equation:</h3>
+                                <Form.Input width={5} placeholder='Equation' onChange={(e) => setF(e.target.value)}/>
+                            </Form.Field>
+                            <Form.Field>
+                                <h3>Initial Guess:</h3>
+                                <Form.Input width={5} placeholder='Initial Guess' onChange={(e) => setGues(e.target.value)}/>
+                            </Form.Field>
+                            <Form.Field>
+                                <h3>Trials:</h3>
+                                <Form.Input width={5} placeholder='Trials' onChange={(e) => setTrialz(e.target.value)}/>
+                            </Form.Field>
+                            <Button type="submit">Compute</Button>
+                        </Form>
+                        <h3>Root = {solut}</h3>
+                    </Grid.Column>
+                    <Grid.Column className = "newtonsmethod">
+                        <a href="https://andymath.com/wp-content/uploads/2019/08/newtons-method-notes.jpg" >
+                            <img src="https://andymath.com/wp-content/uploads/2019/08/newtons-method-notes.jpg" alt = 'numericalimage' className = "numericalimage"/>
+                        </a>
+                    </Grid.Column>
+                </Grid>
+                <Divider vertical></Divider>
+            </Segment>
+        </div>
     )
 }
 

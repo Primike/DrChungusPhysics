@@ -103,7 +103,7 @@ code {
 }
 
 .signup {
-  background-color: #e7d7b0;
+  background-color: #e9dec3;
   border: 5px solid rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
@@ -279,6 +279,29 @@ div.ui.card {
 
 /* Profile/////////////////////////////////////////////////////////////////// */
 
+.profilediv{
+  text-align: center;
+  background-color: #d3e5e6;
+}
+
+.names{
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.username{
+  font-size: 40px;
+}
+
+.email{
+  font-size: 30px;
+}
+
+.profileimage{
+  width: 500px;
+  height: 500px;
+}
+
 .editdiv {
   display: flex;
   flex-direction: row;
@@ -298,7 +321,106 @@ div.ui.card {
 }
 
 
+/* NumericalMethods////////////////////////////////////////////////////////////////// */
 
+.numericalmethoddiv{
+  padding: 30px;
+}
+
+.methodtitle{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+.numericalimage {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  float: right;
+
+}
+
+.newtonsmethod{
+  background-color: #cfc781;
+  height: 500px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.simpsonsrule{
+  background-color: #cfc781;
+  height: 600px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.powermethod{
+  background-color: #cfc781;
+  height: 780px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.jacobimethod {
+  background-color: #cfc781;
+  height: 730px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+
+/* testimonials////////////////////////////////////////////////////////// */
+
+.testimonialdiv{
+  background-color: #d3e5e6;
+}
+
+.testimonialshead{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+.testimonialform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addtestimonial{
+  background-color: #aec3c4;
+  border: 5px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 0 1rem 1rem;
+  height: 400px;
+}
+
+.testimonialimage{
+  width: 400px;
+  height: 400px;
+  margin-left: 100px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+.testimonialname{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+
+.testimonialtext{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+  font-style: italic;
+}
 
 iframe
 {

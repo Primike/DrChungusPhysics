@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Testimonial from "./Testimonial";
+import { Form, Button } from 'semantic-ui-react'
 
 function Testimonals({testimonials, handleAddTestimonial}) {
     const [name, setName] = useState("");
@@ -31,45 +32,33 @@ function Testimonals({testimonials, handleAddTestimonial}) {
       }
 
     return (
-        <div className = 'newstock'>
-            {testimonials.map((testimonial) => (
-                <Testimonial testimonial = {testimonial} key = {testimonial.id}/>
-            ))}
-            <h2 className = 'addnewstock'>Add testimonial</h2>
-            <form className="newstock" onSubmit={handleSubmit}>
-                <label className="labeladdname">
-                    From: {}
-                    <input
-                        className ='addstockname' 
-                        type="text" 
-                        name="name" 
-                        value = {name} 
-                        onChange={(e) => setName(e.target.value)} />
-                </label>
-                <br/>
-                <label className="labeladdimage">
-                    Image URL: {}
-                    <input 
-                        className = 'addlogo'
-                        type="text" 
-                        name="image_url" 
-                        value = {image_url} 
-                        onChange={(e) => setImageURL(e.target.value)} />
-                </label>
-                <br/>
-                <label className="labeladdprice">
-                    Text: {}
-                    <input 
-                        className = 'addprice'
-                        type="text" 
-                        name="text" 
-                        value = {text} 
-                        onChange={(e) => setText(e.target.value)} />
-                </label>
-                <button className = 'addbutton' type="submit">Launch</button>
-                <hr/>
-            </form>
-        </div>
+        <>
+
+            <h1 className="testimonialshead">Testimonials</h1>       
+                <div className = "testimonialform">
+                    <Form onSubmit={handleSubmit} className = "addtestimonial">
+                        <h1>Add testimonial</h1>
+                        <Form.Field>
+                            <h3>From:</h3>
+                            <Form.Input placeholder='Name' value = {name} onChange={(e) => setName(e.target.value)}/>
+                        </Form.Field>
+                        <Form.Field>
+                            <h3>Image URL: {}</h3>
+                            <Form.Input placeholder='Image' value = {image_url} onChange={(e) => setImageURL(e.target.value)}/>
+                        </Form.Field>
+                        <Form.Field>
+                            <h3>Text: {}</h3>
+                            <Form.Input placeholder='Text' value = {text} onChange={(e) => setText(e.target.value)}/>
+                        </Form.Field>
+                        <Button type="submit">Submit</Button>
+                    </Form>
+                </div>
+                <div className = "numericalmethoddiv">
+                    {testimonials.map((testimonial) => (
+                      <Testimonial testimonial = {testimonial} key = {testimonial.id}/>
+                    ))}
+                </div>
+        </>
     )
 }
 

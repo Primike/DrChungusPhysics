@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, Form } from 'semantic-ui-react'
 
 
 
 function EditProfile({user, setUser}) {
-    const [first_name, setFirstName] = useState("");
-    const [last_name, setLastName] = useState("");
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [image_url,setImageUrl] = useState("")
+    const [first_name, setFirstName] = useState(user.first_name);
+    const [last_name, setLastName] = useState(user.last_name);
+    const [username, setUsername] = useState(user.username);
+    const [email, setEmail] = useState(user.email);
+    const [image_url,setImageUrl] = useState(user.image_url)
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
@@ -40,78 +40,31 @@ function EditProfile({user, setUser}) {
             <h1>Edit Profile</h1>
             <Form.Field>
               <label htmlFor="username">First Name</label>
-              <input
-                placeholder='First Name'
-                type="text"
-                id="first_name"
-                autoComplete="off"
-                value={user.first_name}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
+              <Form.Input placeholder='First Name' value={first_name} onChange={(e) => setFirstName(e.target.value)}/>
             </Form.Field>
             <Form.Field>
               <label htmlFor="username">Last Name</label>
-              <input
-                placeholder='Last Name'
-                type="text"
-                id="last_name"
-                autoComplete="off"
-                value={user.last_name}
-                onChange={(e) => setLastName(e.target.value)}
-              />
+              <Form.Input placeholder='Last Name' value={last_name} onChange={(e) => setLastName(e.target.value)}/>
             </Form.Field>
             <Form.Field>
               <label htmlFor="username">Email</label>
-              <input
-                placeholder='Email'
-                type="text"
-                id="email"
-                autoComplete="off"
-                value={user.email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+              <Form.Input placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
             </Form.Field>
             <Form.Field>
               <label htmlFor="username">Profile Picture</label>
-              <input
-                placeholder='Profile Picture'
-                type="text"
-                id="username"
-                autoComplete="off"
-                value={user.image_url}
-                onChange={(e) => setImageUrl(e.target.value)}
-              />
+              <Form.Input placeholder='Profile Picture' value={image_url} onChange={(e) => setImageUrl(e.target.value)}/>
             </Form.Field>
             <Form.Field>
               <label htmlFor="username">Username</label>
-              <input
-                placeholder='Username'
-                type="text"
-                id="username"
-                autoComplete="off"
-                value={user.username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
+              <Form.Input placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
             </Form.Field>
             <Form.Field>
               <label htmlFor="password">New Password</label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete="current-password"
-              />
+              <Form.Input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
             </Form.Field>
             <Form.Field>
               <label htmlFor="password">New Password Confirmation</label>
-              <input
-                type="password"
-                id="password_confirmation"
-                value={passwordConfirmation}
-                onChange={(e) => setPasswordConfirmation(e.target.value)}
-                autoComplete="current-password"
-              />
+              <Form.Input type="password" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
             </Form.Field>
             <Button type="submit">Submit</Button>
           </Form>

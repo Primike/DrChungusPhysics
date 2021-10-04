@@ -1,8 +1,8 @@
 import functionPlot from "function-plot";
 
 let contentsBounds = document.body.getBoundingClientRect();
-let width = 1000;
-let height = 800;
+let width = 800;
+let height = 600;
 let ratio = contentsBounds.width / width;
 width *= ratio;
 height *= ratio;

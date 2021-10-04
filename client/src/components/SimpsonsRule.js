@@ -1,5 +1,5 @@
-import { create, all, math } from 'mathjs'
-import { Form, Button } from 'semantic-ui-react'
+import { create, all } from 'mathjs'
+import { Form, Button, Divider, Grid, Segment } from 'semantic-ui-react'
 import { useState } from "react";
 
 function SimpsonsRule () {
@@ -34,29 +34,41 @@ function SimpsonsRule () {
     }
 
     return (
-        <>
-            <Form onSubmit={computeIntegral} className = "findroot">
-                <h1>Simpson's Rule</h1>
-                <Form.Field>
-                    <h3>Equation:</h3>
-                    <Form.Input width={4} placeholder='Equation' onChange={(e) => setF(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <h3>Start Point:</h3>
-                    <Form.Input width={4} placeholder='Start' onChange={(e) => setStart(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <h3>End Point:</h3>
-                    <Form.Input width={4} placeholder='End' onChange={(e) => setEnd(e.target.value)}/>
-                </Form.Field>
-                <Form.Field>
-                    <h3>Intervals:</h3>
-                    <Form.Input width={4} placeholder='Intervals' onChange={(e) => setIntervals(e.target.value)}/>
-                </Form.Field>
-                <Button type="submit">Compute</Button>
-            </Form>
-            <h3>Definite Integral = {integral}</h3>
-        </>
+        <div className = "numericalmethoddiv">
+            <Segment>
+                <Grid columns={2} relaxed='very'>
+                    <Grid.Column className = "simpsonsrule" >
+                        <Form onSubmit={computeIntegral} className = "findroot">
+                            <h1 className="methodtitle">Simpson's Rule</h1>
+                            <Form.Field>
+                                <h3>Equation:</h3>
+                                <Form.Input width={4} placeholder='Equation' onChange={(e) => setF(e.target.value)}/>
+                            </Form.Field>
+                            <Form.Field>
+                                <h3>Start Point:</h3>
+                                <Form.Input width={4} placeholder='Start' onChange={(e) => setStart(e.target.value)}/>
+                            </Form.Field>
+                            <Form.Field>
+                                <h3>End Point:</h3>
+                                <Form.Input width={4} placeholder='End' onChange={(e) => setEnd(e.target.value)}/>
+                            </Form.Field>
+                            <Form.Field>
+                                <h3>Intervals:</h3>
+                                <Form.Input width={4} placeholder='Intervals' onChange={(e) => setIntervals(e.target.value)}/>
+                            </Form.Field>
+                            <Button type="submit">Compute</Button>
+                            <h3>Definite Integral = {integral}</h3>
+                        </Form>
+                    </Grid.Column>
+                    <Grid.Column className = "simpsonsrule">
+                        <a href="https://www.mathauditor.com/menu-includes/images/simp2.png" >
+                            <img src="https://www.mathauditor.com/menu-includes/images/simp2.png" alt = 'numericalimage' className = "numericalimage"/>
+                        </a>
+                    </Grid.Column>
+                </Grid>
+                <Divider vertical></Divider>
+            </Segment>
+        </div>
     )
 }
 
