@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "function-plot": "^1.22.7",
+    "iframe": "^1.0.0",
     "mathjs": "^9.5.0",
+    "react-iframe": "^1.8.0",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
     "semantic-ui-css": "^2.4.1",

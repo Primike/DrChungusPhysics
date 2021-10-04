@@ -7,9 +7,8 @@ let ratio = contentsBounds.width / width;
 width *= ratio;
 height *= ratio;
 
-function Graph({equation = "x^2", derivative = "2x"}) {
+export const Graph = ({equation = "x^2", derivative = "2x"}) => {
     return (
-        <>
             <div>
                 {functionPlot({
                 title: `y = ${equation}`,
@@ -33,10 +32,8 @@ function Graph({equation = "x^2", derivative = "2x"}) {
                     }
                     }
                 ]
-                })}
-                
+                })}  
             </div>
-        </>
     )
 }
 
