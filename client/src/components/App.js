@@ -7,11 +7,12 @@ import Course from  "./Course"
 import Login from "./Login";
 import NavBar from "./NavBar";
 import Graph from "./Graph.tsx";
+import Grapher from "./Grapher";
 import Profile from "./Profile";
 import Testimonials from "./Testimonials"
 import WelcomePage from "./WelcomePage";
-import 'semantic-ui-css/semantic.min.css'
 import NumericalMethods from "./NumericalMethods";
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -47,13 +48,16 @@ function App() {
     <>
       <NavBar user={user} setUser={setUser} />
       <main>
-        {user ? (
+        {user ? 
           <Switch>
             <Route path="/courses">
               <Courses courses = {courses}/>
             </Route>
             <Route path="/numericalmethods">
-              <NumericalMethods setEquation = {setEquation} setDerivative={setDerivative} />
+              <NumericalMethods/>
+            </Route>
+            <Route path="/grapher">
+              <Grapher setEquation = {setEquation} setDerivative={setDerivative}/>
             </Route>
             <Route path="/graph">
               <Graph equation = {equation} derivative = {derivative}/>
@@ -73,7 +77,7 @@ function App() {
               <UserHome user={user}/>
             </Route>
           </Switch>
-        ) : (
+          : 
           <Switch>
             <Route path="/signup">
               <SignUp setUser={setUser} />
@@ -85,7 +89,7 @@ function App() {
               <WelcomePage />
             </Route>
           </Switch>
-        )}
+        }
       </main>
     </>
   );

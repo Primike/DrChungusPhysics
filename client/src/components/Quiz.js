@@ -67,42 +67,45 @@ function Quiz({quizquestions, course, user, usercourse, setUserCourse}) {
 	return (
 		<div className='quiz'>
 			{usercourse.length>0 ? 
-						<h1 className='retakesection'>							
-							<p className="youpassed">You passed the course!</p>
-							<img className = "rechungus" src ="https://c.tenor.com/JUiXaPL-bNoAAAAd/big-chungus.gif" alt="bigchungus"/>
-							<Button size='huge' className = "retake" onClick={() => clicker()}>Retake the course</Button>
-						</h1>
-						:
-			<>
-			{showScore ? (
-				<h1 className='scoresection'>
-					You scored {score} out of {questions.length}
-					{score === 3 ? (
-						<>
-							<p className="youpassed">You passed the course!</p>
-							<img className = "passchungus" src ="https://c.tenor.com/-zRUM3RMM64AAAAM/big-chungus.gif" alt="bigchungus"/>
-						</>
-						):(<>
-								<p className="youpassed">Keep Studying!</p>
-								<img className = "passchungus" src ="https://i.imgflip.com/31ihns.jpg" alt="bigchungus"/>
-							</>)}
+				<h1 className='retakesection'>							
+					<p className="youpassed">You passed the course!</p>
+					<img className = "rechungus" src ="https://c.tenor.com/JUiXaPL-bNoAAAAd/big-chungus.gif" alt="bigchungus"/>
+					<Button size='huge' className = "retake" onClick={() => clicker()}>Retake the course</Button>
 				</h1>
-			) : (
-				<div className = "quizsection">
-					<div>
-						<div className="questionnumber">
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+				:
+				<>
+					{showScore ? 
+						<h1 className='scoresection'>
+							You scored {score} out of {questions.length}
+							{score === 3 ? 
+								<>
+									<p className="youpassed">You passed the course!</p>
+									<img className = "passchungus" src ="https://c.tenor.com/-zRUM3RMM64AAAAM/big-chungus.gif" alt="bigchungus"/>
+								</>
+								:
+								<>
+									<p className="youpassed">Keep Studying!</p>
+									<img className = "passchungus" src ="https://i.imgflip.com/31ihns.jpg" alt="bigchungus"/>
+								</>
+							}
+						</h1>
+						: 
+						<div className = "quizsection">
+							<div>
+								<div className="questionnumber">
+									<span>Question {currentQuestion + 1}</span>/{questions.length}
+								</div>
+								<div className="quesitontext">{questions[currentQuestion].questionText}</div>
+							</div>
+							<div className='answers'>
+								{questions[currentQuestion].answerOptions.map((answerOption, index) => (
+									<Button size='huge' className = "quizbutton" key = {`${index}+${answerOption}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{index+1}. {answerOption.answerText}</Button>
+								))}
+							</div>
 						</div>
-						<div className="quesitontext">{questions[currentQuestion].questionText}</div>
-					</div>
-					<div className='answers'>
-						{questions[currentQuestion].answerOptions.map((answerOption, index) => (
-							<Button size='huge' className = "quizbutton" key = {`${index}+${answerOption}`} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{index+1}. {answerOption.answerText}</Button>
-						))}
-					</div>
-				</div>
-			)}
-			</>}
+					}
+				</>
+			}
 		</div>
 	);
 }

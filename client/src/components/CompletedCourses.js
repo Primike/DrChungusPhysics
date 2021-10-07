@@ -6,15 +6,14 @@ function CompletedCourses({courses}) {
             <h1>Completed Courses Will Show Up Here!</h1>
             <div className ="courses">
                 {courses ?
-                courses.map((x) => {
+                    courses.map((x) => {
                         return(
                             <CompletedCourse course={x} key = {x.id}/>
-                            )
-                        })
+                        )
+                    })
                     :
                     <>
-                    </>
-                    
+                    </>              
                 }
             </div>
         </>

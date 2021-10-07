@@ -13,15 +13,15 @@ function NavBar({ user, setUser }) {
 
   return (
     <header className = "alltabs">
-        {user ? (
+        {user ? 
           <UserTabs handleLogoutClick = {handleLogoutClick}/>
-        ) : (
+          : 
           <div className="firstlinks">
             <Button size='massive'><NavLink to="/">Home</NavLink></Button>
             <Button size='massive'><NavLink to="/signup">Signup</NavLink></Button>
             <Button size='massive'><NavLink to="/login">Login</NavLink></Button>
           </div>
-        )}
+        }
     </header>
   );
 }

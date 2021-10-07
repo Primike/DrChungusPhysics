@@ -39,32 +39,32 @@ function EditProfile({user, setUser}) {
           <Form onSubmit={handleSubmit} className = "signup">
             <h1>Edit Profile</h1>
             <Form.Field>
-              <label htmlFor="username">First Name</label>
+              <label>First Name</label>
               <Form.Input placeholder='First Name' value={first_name} onChange={(e) => setFirstName(e.target.value)}/>
             </Form.Field>
             <Form.Field>
-              <label htmlFor="username">Last Name</label>
+              <label>Last Name</label>
               <Form.Input placeholder='Last Name' value={last_name} onChange={(e) => setLastName(e.target.value)}/>
             </Form.Field>
             <Form.Field>
-              <label htmlFor="username">Email</label>
+              <label>Email</label>
               <Form.Input placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
             </Form.Field>
             <Form.Field>
-              <label htmlFor="username">Profile Picture</label>
+              <label>Profile Picture</label>
               <Form.Input placeholder='Profile Picture' value={image_url} onChange={(e) => setImageUrl(e.target.value)}/>
             </Form.Field>
             <Form.Field>
-              <label htmlFor="username">Username</label>
+              <label>Username</label>
               <Form.Input placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
             </Form.Field>
             <Form.Field>
-              <label htmlFor="password">New Password</label>
-              <Form.Input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+              <label>New Password</label>
+              <Form.Input type="password" onChange={(e) => setPassword(e.target.value)}/>
             </Form.Field>
             <Form.Field>
-              <label htmlFor="password">New Password Confirmation</label>
-              <Form.Input type="password" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
+              <label>New Password Confirmation</label>
+              <Form.Input type="password" onChange={(e) => setPasswordConfirmation(e.target.value)}/>
             </Form.Field>
             <Button type="submit">Submit</Button>
           </Form>

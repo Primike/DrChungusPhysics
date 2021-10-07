@@ -37,6 +37,7 @@ code {
 .welcomediv {
   display: flex;
   flex-direction: row;
+  height: 860px;
 }
 
 .welcomechungus {
@@ -78,10 +79,7 @@ code {
 
 .welcomephoto {
   width: 65%;
-  height: 860px;
-  position: relative;
-  float: right;
-  background: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pillars_of_creation.jpg") no-repeat; 
+  background: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pillars_of_creation.jpg") no-repeat ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -103,7 +101,7 @@ code {
 }
 
 .signup {
-  background-color: #e9dec3;
+  background-color: #e2cfe7;
   border: 5px solid rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
@@ -126,7 +124,7 @@ code {
 }
 
 .login {
-  background-color: #e7d7b0;
+  background-color: #9bd3e4;
   border: 5px solid rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
@@ -370,6 +368,12 @@ div.ui.card {
   border-radius: 5px;
 }
 
+.grapher {
+  background-color: #8ab37f;
+  height: 500px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
 
 /* testimonials////////////////////////////////////////////////////////// */
 

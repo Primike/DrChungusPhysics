@@ -1,7 +1,7 @@
+import { useState, useEffect } from 'react';
 import { Tab } from 'semantic-ui-react'
 import Chapter from './Chapter';
 import Quiz from './Quiz';
-import { useState, useEffect } from 'react';
 
 function Course({course, user}) {
     let newTabRender = [];

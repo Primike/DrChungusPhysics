@@ -25,24 +25,12 @@ function Login({ setUser }) {
       <Form className ="login" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <Form.Field>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+        <label>Username</label>
+        <Form.Input placeholder='Username' onChange={(e) => setUsername(e.target.value)}/>
         </Form.Field>
         <Form.Field>
         <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          autoComplete="current-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <Form.Input placeholder='Password' type="password" onChange={(e) => setPassword(e.target.value)}/>
         </Form.Field>
         <Button type="submit">Login</Button>
       </Form>

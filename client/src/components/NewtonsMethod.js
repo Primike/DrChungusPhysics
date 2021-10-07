@@ -22,7 +22,7 @@ function NewtonsMethod () {
         for (let i = 0; i < trials; i++) {
             guess = guess - parser.evaluate(`f(${guess})`)/parser.evaluate(`g(${guess})`)
         }
-        setSolut(guess.toFixed(10))    
+        setSolut(guess.toFixed(5))    
     }
 
     return (

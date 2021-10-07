@@ -11,8 +11,8 @@ function UserHome({user}) {
     }, [])
 
     return (
-        <div >
-            {dailypic ? (
+        <div>
+            {dailypic ? 
                 <>
                     <Segment className="userhome">
                         <Grid columns={2} relaxed='very'>
@@ -22,7 +22,7 @@ function UserHome({user}) {
                                 </a>
                             </Grid.Column>
                             <Grid.Column className = "nasatext">
-                                <h1 className = "welcomenasa">Welcome, {user.username}! here is you NASA pic of the day</h1>
+                                <h1 className = "welcomenasa">Welcome, {user.username}! Here is you NASA pic of the day</h1>
                                 <h2>{dailypic.title}</h2>
                                 <h3>{dailypic.date}</h3>             
                                 <p>{dailypic.explanation}</p>
@@ -31,8 +31,10 @@ function UserHome({user}) {
                         <Divider vertical></Divider>
                     </Segment>              
                 </>
-            ) 
-            : (<h1></h1>)}
+                : 
+                <>
+                </>
+            }
         </div>
     )
 }

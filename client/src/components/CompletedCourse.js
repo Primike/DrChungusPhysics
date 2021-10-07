@@ -2,7 +2,6 @@ import { Card, Image, Button, Icon } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
 function CompletedCourse({course}) {
-    console.log(course)
     return (
         <div className = "coursecard">
             <Card >

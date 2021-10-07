@@ -1,14 +1,13 @@
-import Graph from "./Graph"
 import { NavLink } from "react-router-dom";
-import { Form, Button, Divider, Grid, Segment } from 'semantic-ui-react'
-import Iframe from 'react-iframe'
+import { Form, Button, Grid, Segment } from 'semantic-ui-react'
 
 function Grapher({setEquation, setDerivative}) {
+    
     return (
         <div className = "numericalmethoddiv">
             <Segment>
                 <Grid columns={2} relaxed='very'>
-                    <Grid.Column className = "jacobimethod" >           
+                    <Grid.Column className = "grapher">           
                         <Form>
                             <h1 className="methodtitle">Function Grapher</h1>
                             <Form.Field>
@@ -16,18 +15,15 @@ function Grapher({setEquation, setDerivative}) {
                                 <Form.Input width={4} placeholder='Equation' onChange={(e) => setEquation(e.target.value)}/>
                             </Form.Field>
                             <Form.Field>
-                                <h3>Derivative:</h3>
-                                <Form.Input width={4} placeholder='Optional' onChange={(e) => setDerivative(e.target.value)}/>
+                                <h3>Derivative(Optional):</h3>
+                                <Form.Input width={4} placeholder='Derivative' onChange={(e) => setDerivative(e.target.value)}/>
                             </Form.Field>
-                            <Button><NavLink exact to = "/graph">Graph</NavLink></Button>
+                            <Button><NavLink exact to = "/graph" target = "_blank">Graph</NavLink></Button>
+                            <h2>Use exp(x) for e^x</h2>
+                            <h2>Use log(x) for ln(x)</h2>
                         </Form>
                     </Grid.Column>
-                    <Grid.Column className = "jacobimethod">
-                        <Iframe id="mygraph" src="../../Graph.tsx" width="500" height="500" title = "grapher">
-                        </Iframe>
-                    </Grid.Column>
                 </Grid>
-                <Divider vertical></Divider>
             </Segment>
         </div>
     )

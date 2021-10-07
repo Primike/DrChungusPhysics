@@ -21,8 +21,8 @@ function UserTabs({handleLogoutClick}) {
                     </NavLink>
                 </Menu.Item>
                 <Menu.Item>
-                    <NavLink exact to = "/extras">
-                        Extras
+                    <NavLink exact to = "/grapher">
+                        Grapher
                     </NavLink>
                 </Menu.Item>
                 <Menu.Item>
@@ -39,7 +39,6 @@ function UserTabs({handleLogoutClick}) {
                     <Button onClick={handleLogoutClick}>Logout</Button>
                 </Menu.Item>
             </Menu>
-
         </div>
     )
 }

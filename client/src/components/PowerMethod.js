@@ -47,33 +47,33 @@ function PowerMethod() {
                             <h1 className="methodtitle">Power Method</h1>
                             <h3>Matrix:</h3>
                             <Form.Group>
-                                <Form.Input width={1} onChange={(e) => setZeroZero(e.target.value)}/>
-                                <Form.Input width={1} onChange={(e) => setZeroOne(e.target.value)}/>
-                                <Form.Input width={1} onChange={(e) => setZeroTwo(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setZeroZero(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setZeroOne(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setZeroTwo(e.target.value)}/>
                             </Form.Group>
                             <Form.Group>
-                                <Form.Input width={1} onChange={(e) => setOneZero(e.target.value)}/>
-                                <Form.Input width={1} onChange={(e) => setOneOne(e.target.value)}/>
-                                <Form.Input width={1} onChange={(e) => setOneTwo(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setOneZero(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setOneOne(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setOneTwo(e.target.value)}/>
                             </Form.Group>
                             <Form.Group>
-                                <Form.Input width={1} onChange={(e) => setTwoZero(e.target.value)}/>
-                                <Form.Input width={1} onChange={(e) => setTwoOne(e.target.value)}/>
-                                <Form.Input width={1} onChange={(e) => setTwoTwo(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setTwoZero(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setTwoOne(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setTwoTwo(e.target.value)}/>
                             </Form.Group>
                             <h3>Inital Guess Vector:</h3>
                             <Form.Group>
-                                <Form.Input width={1} onChange={(e) => setZeroZerou(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setZeroZerou(e.target.value)}/>
                             </Form.Group>
                             <Form.Group>
-                                <Form.Input width={1} onChange={(e) => setZeroOneu(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setZeroOneu(e.target.value)}/>
                             </Form.Group>
                             <Form.Group>
-                                <Form.Input width={1} onChange={(e) => setZeroTwou(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setZeroTwou(e.target.value)}/>
                             </Form.Group>
                             <h3>Trails:</h3>
                             <Form.Group>
-                                <Form.Input width={1} onChange={(e) => setTrialz(e.target.value)}/>
+                                <Form.Input width={2} onChange={(e) => setTrialz(e.target.value)}/>
                             </Form.Group>   
 
                             <Button type="submit">Compute</Button>
