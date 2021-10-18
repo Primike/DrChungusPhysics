@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :testimonials
-  resources :quiz_answers
-  resources :quiz_questions
-  resources :chapters
-  resources :user_courses
-  resources :courses
-  resources :users
+  resources :testimonials, only: [:index, :create]
+  resources :quiz_answers, only: [:index]
+  resources :quiz_questions, only: [:index, :show]
+  resources :chapters, only: [:index]
+  resources :user_courses, only: [:index, :create, :destroy]
+  resources :courses, only: [:index, :show]
+  resources :users, only: [:create, :show, :update]
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   post "/login", to: "sessions#create"

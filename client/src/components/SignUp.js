@@ -38,15 +38,15 @@ function SignUp({ setUser }) {
       <Form onSubmit={handleSubmit} className = "signup">
         <h1>Sign Up</h1>
         <Form.Field>
-          <label htmlFor="username">First Name</label>
+          <label htmlFor="username">First Name (Required)</label>
           <Form.Input placeholder='First Name' onChange={(e) => setFirstName(e.target.value)}/>
         </Form.Field>
         <Form.Field>
-          <label htmlFor="username">Last Name</label>
+          <label htmlFor="username">Last Name (Required)</label>
           <Form.Input placeholder='Last Name' onChange={(e) => setLastName(e.target.value)}/>
         </Form.Field>
         <Form.Field>
-          <label htmlFor="username">Email</label>
+          <label htmlFor="username">Email (Required)</label>
           <Form.Input placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
         </Form.Field>
         <Form.Field>
@@ -54,7 +54,7 @@ function SignUp({ setUser }) {
           <Form.Input placeholder='Profile Picture' onChange={(e) => setImageUrl(e.target.value)}/>
         </Form.Field>
         <Form.Field>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Username (Required)</label>
           <Form.Input placeholder='Username' onChange={(e) => setUsername(e.target.value)}/>
         </Form.Field>
         <Form.Field>
