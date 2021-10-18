@@ -1,13 +1,13 @@
 import functionPlot from "function-plot";
 
 let contentsBounds = document.body.getBoundingClientRect();
-let width = 700;
-let height = 500;
+let width = 800;
+let height = 400;
 let ratio = contentsBounds.width / width;
 width *= ratio;
 height *= ratio;
 
-export const Graph = ({equation = "x^2", derivative = "0"}) => {
+export const Graph = ({equation = localStorage.getItem('Equation'), derivative = localStorage.getItem('Derivative')}) => {
     return (
             <div>
                 {functionPlot({

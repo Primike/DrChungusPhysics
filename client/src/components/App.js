@@ -18,8 +18,6 @@ function App() {
   const [user, setUser] = useState(null);
   const [courses, setCourses] = useState([])
   const [testimonials, setTestimonials] = useState([])
-  const [equation, setEquation] = useState()
-  const [derivative, setDerivative] = useState()
 
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -57,10 +55,10 @@ function App() {
               <NumericalMethods/>
             </Route>
             <Route path="/grapher">
-              <Grapher setEquation = {setEquation} setDerivative={setDerivative}/>
+              <Grapher/>
             </Route>
             <Route path="/graph">
-              <Graph equation = {equation} derivative = {derivative}/>
+              <Graph/>
             </Route>
             <Route path="/profile">
               <Profile user = {user} setUser={setUser}/>
