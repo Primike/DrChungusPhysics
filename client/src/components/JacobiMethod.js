@@ -5,12 +5,12 @@ import { Form, Button, Divider, Grid, Segment } from 'semantic-ui-react'
 function JacobiMethod() {
     const math = create(all,  {})
 
-    const [trialz, setTrialz] = useState(1)
+    const [trialz, setTrialz] = useState(100)
     const [solutionz, setSoultionz] = useState([0,0,0])
 
-    const [zerozerou, setZeroZerou] = useState(0)
-    const [zerooneu, setZeroOneu] = useState(0)
-    const [zerotwou, setZeroTwou] = useState(0)
+    const [zerozerou, setZeroZerou] = useState(1)
+    const [zerooneu, setZeroOneu] = useState(1)
+    const [zerotwou, setZeroTwou] = useState(1)
 
     const [zerozero, setZeroZero] = useState(0)
     const [zeroone, setZeroOne] = useState(0)
@@ -73,17 +73,17 @@ function JacobiMethod() {
                             </Form.Group>
                             <h3>Inital Guess Vector:</h3>
                             <Form.Group>
-                                <Form.Input width={2} onChange={(e) => setZeroZerou(e.target.value)}/>
+                                <Form.Input width={2} value = {zerozerou} onChange={(e) => setZeroZerou(e.target.value)}/>
                             </Form.Group>
                             <Form.Group>
-                                <Form.Input width={2} onChange={(e) => setZeroOneu(e.target.value)}/>
+                                <Form.Input width={2} value = {zerooneu} onChange={(e) => setZeroOneu(e.target.value)}/>
                             </Form.Group>
                             <Form.Group>
-                                <Form.Input width={2} onChange={(e) => setZeroTwou(e.target.value)}/>
+                                <Form.Input width={2} value = {zerotwou} onChange={(e) => setZeroTwou(e.target.value)}/>
                             </Form.Group>
                             <h3>Trails:</h3>
                             <Form.Group>
-                                <Form.Input width={2} onChange={(e) => setTrialz(e.target.value)}/>
+                                <Form.Input width={2} value = {trialz} onChange={(e) => setTrialz(e.target.value)}/>
                             </Form.Group>   
                             <Button type="submit">Compute</Button>
                         </Form>

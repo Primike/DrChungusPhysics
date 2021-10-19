@@ -5,8 +5,8 @@ import { useState } from "react";
 function NewtonsMethod () {
     const [f, setF] = useState("x")
     const [solut,setSolut] = useState()
-    const [gues, setGues] = useState()
-    const [trialz, setTrialz] = useState()
+    const [gues, setGues] = useState(1)
+    const [trialz, setTrialz] = useState(100)
     const math = create(all,  {})
     const parser = math.parser()
 
@@ -38,11 +38,11 @@ function NewtonsMethod () {
                             </Form.Field>
                             <Form.Field>
                                 <h3>Initial Guess:</h3>
-                                <Form.Input width={5} placeholder='Initial Guess' onChange={(e) => setGues(e.target.value)}/>
+                                <Form.Input width={5} placeholder='Initial Guess' value = {gues} onChange={(e) => setGues(e.target.value)}/>
                             </Form.Field>
                             <Form.Field>
                                 <h3>Trials:</h3>
-                                <Form.Input width={5} placeholder='Trials' onChange={(e) => setTrialz(e.target.value)}/>
+                                <Form.Input width={5} placeholder='Trials' value = {trialz} onChange={(e) => setTrialz(e.target.value)}/>
                             </Form.Field>
                             <Button type="submit">Compute</Button>
                         </Form>

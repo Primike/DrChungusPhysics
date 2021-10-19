@@ -6,7 +6,7 @@ function SimpsonsRule () {
     const [f, setF] = useState("x")
     const [start, setStart] = useState()
     const [end, setEnd] = useState()
-    const [intervals, setIntervals] = useState()
+    const [intervals, setIntervals] = useState(100)
 
     const [integral,setIntegral] = useState()
     const math = create(all,  {})
@@ -54,7 +54,7 @@ function SimpsonsRule () {
                             </Form.Field>
                             <Form.Field>
                                 <h3>Intervals:</h3>
-                                <Form.Input width={4} placeholder='Intervals' onChange={(e) => setIntervals(e.target.value)}/>
+                                <Form.Input width={4} placeholder='Intervals' value = {intervals} onChange={(e) => setIntervals(e.target.value)}/>
                             </Form.Field>
                             <Button type="submit">Compute</Button>
                             <h3>Definite Integral = {integral}</h3>

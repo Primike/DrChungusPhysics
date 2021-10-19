@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function Grapher() {
     const [eqn, setEqn] = useState('');
-    const [der, setDer] = useState('');
+    const [der, setDer] = useState(0);
 
     const handle = () => {
         localStorage.setItem('Equation', eqn);
@@ -25,7 +25,7 @@ function Grapher() {
                             </Form.Field>
                             <Form.Field>
                                 <h3>Derivative(Optional):</h3>
-                                <Form.Input width={4} placeholder='Derivative' onChange={(e) => setDer(e.target.value)}/>
+                                <Form.Input width={4} placeholder='Derivative' value = {der} onChange={(e) => setDer(e.target.value)}/>
                             </Form.Field>
                             <Button onClick={handle}><NavLink exact to = "/graph" target = "_blank">Graph</NavLink></Button>
                             <h2>Use exp(x) for e^x</h2>
