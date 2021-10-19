@@ -17,3 +17,5 @@ I added 4 numerical methods which the user can play around with to solve problem
 This is a project I really love so I will keep adding to it over time and improve it beyond what it currently is.
 
 I hope you like it. If you really love physics and math I'm sure you'll feel right at home.
+
+Demo: https://drchungusphysics.herokuapp.com/
